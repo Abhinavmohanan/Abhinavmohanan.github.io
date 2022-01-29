@@ -1,0 +1,189 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+div.window {
+  margin-bottom: 250px;
+  margin-top: 180px;
+  font-weight: bold;
+  font-size: 23px;
+  font-family: "Source Code Pro";
+}
+
+div.type2,
+div.type3 {
+  margin-bottom: 60px;
+  position: relative;
+  width: max-content;
+  margin-top: 60px;
+}
+
+div.type {
+  position: relative;
+  width: max-content;
+}
+
+div.type2::after,
+div.type2::before,
+div.type3::after,
+div.type3::before,
+div.type::after,
+div.type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+div.type::before {
+  background-color: black;
+  animation: typewriter 1s 0.5s steps(4) forwards;
+}
+
+div.type::after {
+  width: 2px;
+  height: 30px;
+  animation: typewriter 1s 0.5s steps(4), aftertypewriter 1ms 1.5s forwards,
+    blinker 500ms infinite;
+  background: white;
+}
+
+div.type2::before {
+  background-color: black;
+  animation: typewriter 2s 1.5s steps(20) forwards;
+}
+
+div.type2::after {
+  width: 2px;
+  height: 30px;
+  animation: beforewriter 1.5s, typewriter 2s 1.5s steps(20),
+    aftertypewriter 1ms 3.5s forwards, blinker 350ms 1.5s infinite;
+  background: white;
+}
+
+div.type3::before {
+  background-color: black;
+  animation: typewriter 6s 3.8s steps(69) forwards;
+}
+
+div.type3::after {
+  width: 2px;
+  height: 30px;
+  animation: beforewriter 3.8s, afterblinker 700ms 3.8s,
+    typewriter 6s 3.8s steps(69) forwards, blinker 350ms 3.8s 18,
+    blinker 900ms 9.5s infinite;
+  background: white;
+}
+
+a.align {
+  text-decoration: none;
+}
+
+i {
+  margin-bottom: 250px;
+  margin-top: 180px;
+}
+
+.btn {
+  margin-bottom: 100px;
+  padding: 14px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 100px;
+  border-color: white;
+  color: white;
+  font-weight: bold;
+  -webkit-animation: fadein ease 3s;
+  -webkit-animation-delay: 9.8s;
+  animation-fill-mode: both;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  transition: 800ms ease-in-out;
+}
+
+img {
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 59px;
+}
+
+img:hover {
+  opacity: 0.7;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+h1 {
+  font-family: Courier, monospace;
+  transition: 1s;
+}
+
+li {
+  text-decoration: none;
+  font-family: Courier, monospace;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+p.about {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 50px;
+  font-family: Courier, monospace;
+}
+
+p.edu {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 10px;
+  font-family: Courier, monospace;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes aftertypewriter {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes beforewriter {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinker {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
